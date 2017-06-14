@@ -125,8 +125,7 @@ with graph.as_default():
     train = tf.train.AdamOptimizer(learning_rate=0.001).minimize(loss)
 
     # And, finally, an initialization op to execute before training.
-    # TODO: rename to tf.global_variables_initializer() on TF 0.12.
-    init = tf.initialize_all_variables()
+    init = tf.global_variables_initializer()
 
 print("images_flat: ", images_flat)
 print("logits: ", logits)
